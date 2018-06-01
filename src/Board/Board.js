@@ -8,13 +8,19 @@ export default class Board extends React.Component {
     constructor(props){
         super(props);
         this.state = {...props}
+        this.boardClick = this.boardClick.bind(this);
     }
     render() {
        return (
        <div className='board-entry'>
         <ScoreBoard />
-        <PlayArea rows = {this.state.rows} cols={this.state.cols} />
+        <div className="PlayAreaWrapper">
+                   <PlayArea rows={this.state.rows} cols={this.state.cols} callToParent={this.boardClick}/>
+        </div>
         <GameControls />
        </div>)
+    }
+    boardClick(event, PlayArea, CharacterBox){
+        console.log("Board updates")
     }
 }
