@@ -9,6 +9,7 @@
     flex: 1 1 100%;
     max-width: 50px;
     height: 50px;
+    user-select: none;
 }
 .CharacterBox input {
     position: absolute;
