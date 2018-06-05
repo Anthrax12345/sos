@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   checkForGameOver(){
-    if(this.gameOverCounter >= rows * cols){
+    if(this.gameOverCounter >= this.settings.rows * this.settings.cols){
       alert("GAME OVER");
     }
   }
@@ -42,7 +42,7 @@ class App extends Component {
   
 
   componentWillMount() {
-    this.state.grid = this.createGrid(this.state.rows, this.state.cols);
+    this.state.grid = this.createGrid(this.state.settings.rows, this.state.settings.cols);
   }
   render() {
     return (

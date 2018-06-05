@@ -15,7 +15,7 @@ export default class Board extends React.Component {
        <div className='board-entry'>
         <ScoreBoard />
         <div className="PlayAreaWrapper">
-                   <PlayArea rows={this.state.rows} cols={this.state.cols} callToParent={this.boardClick}/>
+            <PlayArea rows={this.state.rows} cols={this.state.cols} callToParent={this.boardClick}/>
         </div>
         <GameControls />
        </div>)
